@@ -1,0 +1,29 @@
+
+public class Ejemplo1 {
+	public static void main(String[] args) {
+		int[] numeros = {6,5,4,7,8,7,1,2,3,4};
+		
+		//Mostrar desordenados
+		System.out.println("Números\n-----------");
+		for(int i = 0; i < numeros.length; i++) {
+			System.out.print(numeros[i]);
+		}
+		
+		//Ordenar numeros
+		for(int i = 0; i < numeros.length; i++) {
+			for(int j = i+1; j < numeros.length; j++) {
+				if(numeros[i] > numeros[j]) {
+					int aux = numeros[i];
+					numeros[i] = numeros[j];
+					numeros[j] = aux;
+				}
+			}
+		}
+		
+		//Mostrar ordenados
+		System.out.println("\n\nNúmeros\n-----------");
+		for(int i = 0; i < numeros.length; i++) {
+			System.out.print(numeros[i]);
+		}
+	}
+}

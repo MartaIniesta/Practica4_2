@@ -1,0 +1,3 @@
+Audi,,A1,,negro,,gasolina,,120.000
+Tesla,,i20,,rojo,,electrico,,80.000
+Hyundai,,model 3,,blanco,,diesel,,200.000

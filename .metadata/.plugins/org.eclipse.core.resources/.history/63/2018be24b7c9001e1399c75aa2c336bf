@@ -1,0 +1,21 @@
+package Supuesto1;
+
+import java.util.Scanner;
+
+public class Principal {
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		System.out.print("Introduce una frase: ");
+		String frase = teclado.nextLine().trim();
+		
+		String fraseCambiada = cambiarVerbo(frase);
+		
+		System.out.println(fraseCambiada);
+	}
+
+	public static String cambiarVerbo(String frase) {
+		String regex = "[a-zA-ZñÑ]*([aAeEiI][rR])\\b";
+		frase = frase.replaceAll(regex,"(VERBO)");
+		return frase;
+	}
+}

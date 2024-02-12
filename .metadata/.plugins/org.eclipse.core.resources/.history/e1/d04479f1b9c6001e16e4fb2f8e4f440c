@@ -1,0 +1,30 @@
+package Ejercicio14;
+
+
+
+public class Ejercicio14 {
+	public static void main(String[] args) {
+		System.out.println("Inicio del programa\n");
+		
+		fechaValida("31/12/2023");
+		
+		System.out.println("\nFin del programa");	
+	}
+	
+	public static boolean fechaValida(String fecha) {
+
+		String patron = "([0-9]{2}(/|-|.)[0-9]{2}(/|-|.)[0-9]{4})|([0-9]{4}(/|-|.)[0-9]{2}(/|-|.)[0-9]{2})";
+		boolean coincidencias = fecha.matches(patron);
+		
+		if(!coincidencias) {
+			return false;
+		}
+		
+		String[] separar = fecha.split("/");
+		int dia = Integer.parseInt(separar[0]);
+		int mes = Integer.parseInt(separar[1]);
+		int año = Integer.parseInt(separar[2]);
+
+		return coincidencias;
+	}
+}

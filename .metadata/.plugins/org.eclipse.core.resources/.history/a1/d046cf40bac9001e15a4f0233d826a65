@@ -1,0 +1,40 @@
+package Supuesto2;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Principal {
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		
+		System.out.print("Introduce un dominio de direccion de correo: ");
+		String dominio = teclado.nextLine();
+		
+		ArrayList<Usuarios> lista = new ArrayList<Usuarios>();
+
+		try {
+			File myObj = new File("./usuarios/usuarios.txt");
+	        Scanner datos = new Scanner(myObj);
+	        while (datos.hasNextLine()) {
+	            String linea = datos.nextLine();
+			    String[] partes = linea.split("&");
+			    String[] em = linea.split("\\.");
+			    if(dominio.equals(em[1])) {
+				    System.out.println(em[1]);
+
+			    }	  
+	        }
+	        datos.close();
+	    }catch (FileNotFoundException e) {
+	        System.out.println("Error");
+	        e.printStackTrace();
+	    }
+
+		Usuarios[] array = new Usuarios[lista.size()];
+		for(int i = 0; i < lista.size(); i++) {
+			array[i] = lista.get(i); 
+		}
+	}
+}

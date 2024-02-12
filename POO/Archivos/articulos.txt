@@ -1,0 +1,3 @@
+Manzana@1@Manzana de campo
+Melon@5@Melon de supermercado
+Langosta@11@Langosta congelada lista para hacerla a la plancha

@@ -1,0 +1,21 @@
+package Ejercicio03;
+
+import java.util.Scanner;
+
+public class Ejercicio03 {
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("Inicio del programa\n");
+		
+		String texto = "Estamos viviendo en un submarino amarillo. No tenemos nada que hacer. En el interior del submarino se está muy apretado. Así que estamos leyendo todo el día. Vamos a salir en 5 días";
+		System.out.print("Introduce la palabra que quieres buscar: ");
+		String palabra = teclado.nextLine();
+		
+		System.out.println("\nFin del programa");	
+	}
+	
+	public static int obtenerNumeroVecesSubCadena(String texto, String palabra) {
+		int num = 0;
+		return num;
+	}
+}

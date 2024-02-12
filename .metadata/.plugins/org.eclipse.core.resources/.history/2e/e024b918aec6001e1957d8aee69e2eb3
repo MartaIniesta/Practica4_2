@@ -1,0 +1,38 @@
+package Ejercicio05;
+
+import java.util.Scanner;
+
+public class Ejercicio05 {
+	public static void main(String[] args) {
+		System.out.println("Inicio del programa\n");
+		
+		System.out.println(fechaValida(28,02,2024));
+		
+		System.out.println("\nFin del programa");	
+	}
+	
+	public static boolean fechaValida(int dia, int mes, int año) {
+		int bisiesto = 0;
+		
+		if(mes == 2) {
+			if((bisiesto%4) == 0 && (bisiesto%100) != 0 || (bisiesto%400) == 0) {
+				if(bisiesto == año && dia <= 29) {
+					return true;
+				}else {
+					return false;
+				}
+			}
+		}
+		
+		if(dia > 31 || dia < 0) {
+			return false;
+		}
+		if(mes > 12 || mes < 0) {
+			return false;
+		}
+		if(año > 2024 || año < 0) {
+			return false;
+		}
+		return true;
+	}
+}
